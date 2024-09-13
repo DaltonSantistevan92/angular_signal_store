@@ -1,0 +1,31 @@
+<!-- <pre>
+    <code>
+        {{ store.cardList() | json }}
+    </code>
+</pre> -->
+
+
+<table>
+    <tr>
+        <th>Card Name</th>
+        <th>Cart Type</th>
+    </tr>
+    @for (card of store.cardList() ; track $index) {
+        <tr>
+            <td> {{ card.name }} </td>
+            <td> {{ card.type }} </td>
+        </tr>
+    }
+</table>
+
+current page => {{ page() }}
+
+<button (click)="nextPage()">
+    Next Page
+</button>
+
+<pre>
+    <code>
+        Quantity or Spell Cards : {{ store.cardsCount() }}
+    </code>
+</pre>
